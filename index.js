@@ -1,14 +1,36 @@
 const code = [
+  '',
+  'const matchQ = /\'/g;',
+  'const repQ = \'\\\\\\\'\';',
+  '',
+  'const matchS = /\\\\/g;',
+  'const repS = \'\\\\\\\\\';',
+  '',
   'console.log(\'const code = [\');',
-  'for (var i = 0; i < code.length; i++) {',
-  '  console.log(`\'${code[i]}\',`);',
-  '}',
+  'code.forEach(line => {',
+  '  const escaped = line',
+  '    .replace(matchS, repS)',
+  '    .replace(matchQ, repQ);',
+  '  console.log(`  \'${escaped}\',`);',
+  '})',
+  'console.log(\'];\');',
+  '',
+  'code.forEach(line => console.log(line));',
 ];
 
+const matchQ = /'/g;
+const repQ = '\\\'';
+
+const matchS = /\\/g;
+const repS = '\\\\';
+
 console.log('const code = [');
-code
-  .map(line => line.replace('\'', '\\\''))
-  .forEach(line => console.log(`  '${line}',`));
+code.forEach(line => {
+  const escaped = line
+    .replace(matchS, repS)
+    .replace(matchQ, repQ);
+  console.log(`  '${escaped}',`);
+})
 console.log('];');
 
-//code.forEach(console.log);
+code.forEach(line => console.log(line));
