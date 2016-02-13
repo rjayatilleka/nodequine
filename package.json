@@ -1,0 +1,19 @@
+{
+  "name": "nodequine",
+  "version": "1.0.0",
+  "description": "A quine in nodejs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rjayatilleka/nodequine.git"
+  },
+  "author": "Ramith Jayatilleka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rjayatilleka/nodequine/issues"
+  },
+  "homepage": "https://github.com/rjayatilleka/nodequine#readme"
+}
