@@ -4,6 +4,7 @@
   "description": "A quine in nodejs.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "node test.js"
   },
   "repository": {
